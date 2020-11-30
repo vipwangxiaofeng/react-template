@@ -1,0 +1,61 @@
+{
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
+  "author": "{{author}}",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-loadable": "^5.5.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "env-cmd -e dev react-app-rewired start",
+    "start:test": "env-cmd -e test react-app-rewired start",
+    "start:prod": "env-cmd -e prod react-app-rewired start",
+    "build": "env-cmd -e prod react-app-rewired build",
+    "build:dev": "env-cmd -e dev react-app-rewired build",
+    "build:test": "env-cmd -e test react-app-rewired build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-loadable": "^5.5.3",
+    "@types/react-router-config": "^5.0.1",
+    "@types/react-router-dom": "^5.1.5",
+    "compression-webpack-plugin": "^4.0.1",
+    "customize-cra": "^1.0.0",
+    "env-cmd": "^10.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
+    "react-app-rewired": "^2.1.6"
+  }
+ }
