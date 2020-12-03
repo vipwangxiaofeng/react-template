@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
-import http from './http/http';
-import routes from './router';
+import React from 'react'
+import router from './router'
 function App() {
-  useEffect(() => {
-    http.get("https://www.runoob.com/try/ajax/json_demo.json")
-    
-  }, [])
-  return (
-    <>
-    {routes}
-    </>
-  );
+	return (
+		<div>
+			{router}
+		</div>
+	)
 }
-
-export default App;
+export default App
