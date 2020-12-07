@@ -21,6 +21,8 @@
 		"eslint-plugin-prettier": "^3.2.0",
 		"eslint-plugin-react": "^7.21.5",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"husky": "^4.3.0",
+		"lint-staged": "^10.5.3",
 		"prettier": "^2.2.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
@@ -43,7 +45,8 @@
 		"build": "dotenv -e .env.production react-app-rewired build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"report": "webpack-bundle-analyzer --port 8123 dist/stats.json"
+		"report": "webpack-bundle-analyzer --port 8123 dist/stats.json",
+		"eslint": "eslint --ext .tsx,.ts,.js --fix ./src"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -71,5 +74,17 @@
 		"less": "^3.12.2",
 		"less-loader": "^7.1.0",
 		"react-app-rewired": "^2.1.6"
-	}
+	},
+	"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run eslint",
+      "prettier .prettierrc.js --write",
+      "git add"
+    ]
+  }
 }

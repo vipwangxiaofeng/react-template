@@ -1,4 +1,3 @@
-
 module.exports = {
   printWidth: 180, // 每行代码长度（默认80）
   tabWidth: 2, // 每个tab相当于多少个空格（默认2）
@@ -14,5 +13,5 @@ module.exports = {
   // ignorePath: '.prettierignore',
   endOfLine: 'auto',
   trailingComma: 'all', // 多行使用拖尾逗号（默认none）
-  parser: 'typescript'
+  parser: 'typescript',
 }
