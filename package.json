@@ -10,9 +10,18 @@
 		"@types/node": "^14.14.9",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"babel-eslint": "^10.1.0",
 		"babel-plugin-import": "^1.13.1",
 		"compression-webpack-plugin": "^6.1.1",
 		"dotenv-cli": "^4.0.0",
+		"eslint": "^7.15.0",
+		"eslint-config-prettier": "^7.0.0",
+		"eslint-plugin-prettier": "^3.2.0",
+		"eslint-plugin-react": "^7.21.5",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"prettier": "^2.2.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-loadable": "^5.5.0",
@@ -20,7 +29,8 @@
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.1",
 		"typescript": "^4.1.2",
-		"web-vitals": "^0.2.4"
+		"web-vitals": "^0.2.4",
+		"webpack-bundle-analyzer": "^4.2.0"
 	},
 	"scripts": {
 		"start": "react-app-rewired start",
@@ -32,9 +42,9 @@
 		"build:uat": "dotenv -e .env.uat react-app-rewired build",
 		"build": "dotenv -e .env.production react-app-rewired build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"report": "webpack-bundle-analyzer --port 8123 dist/stats.json"
 	},
-
 	"eslintConfig": {
 		"extends": [
 			"react-app",

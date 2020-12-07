@@ -1,13 +1,8 @@
 import React, { memo } from 'react'
 
-interface Props {
-
+type Props = {
+  name?: string
 }
-
-export default memo(function Home(props: Props) {
-  return (
-    <div>
-      Home Page
-    </div>
-  )
+export default memo(function Home({}: Props) {
+  return <div>Home Page</div>
 })
